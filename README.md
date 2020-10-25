@@ -2,24 +2,30 @@
 This repository is a collection of thoughts intended to help customers with a successful Ansible Automation adoption. This repository is by no means a substitution for enterprises that are in need of a full blown consulting/services need. The focus is on SMEs that are looking for guidance to accelerate their Ansible automation journey.
 
 ## Table of Content
-1. [Introduction & Prerequisite](#introduction--prerequisite)
+- [Introduction & Prerequisite](#introduction--prerequisite)
     - [Official Red Hat Workshop (recommended)](#option-1-recommended-official-red-hat-workshops)
     - [Online Resources, example: Udemy](#option-2-online-resources-example-udemy)
     - [Self Learning (Docs)](#option-3-self-learning-docs)
     - [Jeff Geerling (creator & contributor)](#option-4-jeff-geerling-he-deserves-a-mention)
 
-1. [Preperation Tasks](#preperation-tasks)
+- [Preperation Tasks](#preperation-tasks)
     - [Who](#who)
     - [What](#what)
     - [When](#when)
     - [How](#how)
     - [Why](#why)
 
-1. [Day 1](#day-1)
-1. [Week 1](#week-1)
-1. [Month 1 to 3](#month-1-to-3)
-1. [Year 1](#year-1)
-1. [Appendix](#appendix)
+- [Day 1](#day-1)
+    - [Inventories](#inventories)
+    - [Credentials](#credentials)
+    - [Source Control](#playbook-scm)
+    - [Projects](#projects)
+    - [Deliverable 1](#deliverable-1)
+
+- [Week 1](#week-1)
+- [Month 1 to 3](#month-1-to-3)
+- [Year 1](#year-1)
+- [Appendix](#appendix)
 
 # Introduction & Prerequisite 
 I think that the most important thing for a successful automation journey is the planning phase. A well planned automation journey will actually allow you to save time while a badly planned automation journey will likely simply introduce another tool that will eat away precious time in an already busy day. This repository is really meant to help you with the planning and execution of a successful automation journey.
@@ -120,7 +126,7 @@ For the first 3 months a single repository that contains all playbooks is suffic
 ## Projects
 Set up a [project](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html) within Tower for each of those repositories. Make sure that the right users and teams have access to those projects.
 
-## Deliverable
+## Deliverable 1
 You should now have a running Ansible Tower deployment, access to 1 or more repositories to manage your playbooks, as well as access to your target hosts either via static inventories or dynamic inventories. 
 
 # Week 1
