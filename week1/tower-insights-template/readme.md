@@ -36,7 +36,7 @@ authmethod: BASIC
 ```
 
 Example:
-![Template Example](/images/template.png)
+![Template Example](images/template.png)
 
 **!!! Don't forget to Save the Template!!!**
 
