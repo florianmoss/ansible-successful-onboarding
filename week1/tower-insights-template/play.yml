@@ -1,0 +1,10 @@
+- name: Register a subscription and a host with Insights
+  hosts: all
+  collections:   # Define collections to search
+    - redhat.insights
+
+  tasks:
+    - include_role: 
+        name: insights_client
+      when: ansible_os_family == 'RedHat'
+

@@ -1,0 +1,9 @@
+{
+    "name": "webserver",
+    "description": "Node.js app.",
+    "author": "Florian Moss <fmoss@redhat.com>",
+    "dependencies": {
+      "express": "4.x"
+    },
+    "engine": "node >= 0.10.6"
+  }

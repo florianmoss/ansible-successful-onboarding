@@ -7,21 +7,18 @@ This repository is a collection of thoughts intended to help customers with a su
     - [Online Resources, example: Udemy](#option-2-online-resources-example-udemy)
     - [Self Learning (Docs)](#option-3-self-learning-docs)
     - [Jeff Geerling (creator & contributor)](#option-4-jeff-geerling-he-deserves-a-mention)
-
 - [Preperation Tasks](#preperation-tasks)
     - [Who](#who)
     - [What](#what)
     - [When](#when)
     - [How](#how)
     - [Why](#why)
-
 - [Day 1](#day-1)
     - [Inventories](#inventories)
     - [Credentials](#credentials)
     - [Source Control](#playbook-scm)
     - [Projects](#projects)
     - [Deliverable 1](#deliverable-1)
-
 - [Week 1](#week-1)
 - [Month 1 to 3](#month-1-to-3)
 - [Year 1](#year-1)
@@ -130,8 +127,14 @@ Set up a [project](https://docs.ansible.com/ansible-tower/latest/html/userguide/
 You should now have a running Ansible Tower deployment, access to 1 or more repositories to manage your playbooks, as well as access to your target hosts either via static inventories or dynamic inventories. 
 
 # Week 1
-b
+You will likey have some basic tasks identified that you would like to automate. To accelerate your execution, this section contains some sample playbooks. You can find the playbooks in the Week1 folder.
 
+## NodeJS App Deployment
+This playbook deploys a NodeJS application with forever. It uses a single variable that is specified at the beginning of the playbook.
+
+## VMware Guide
+The integration bewteen Ansible is VMware is quite extensive. The official Ansible documentation contains an [entire section around Ansible for VMware](https://docs.ansible.com/ansible/latest/scenario_guides/guide_vmware.html). 
+You can also get the [collection source code](https://github.com/ansible-collections/vmware.vmware_rest) directly.
 # Month 1 to 3
 bla
 
