@@ -9,6 +9,12 @@ This repository is a collection of thoughts intended to help customers with a su
     - [Jeff Geerling (creator & contributor)](#option-4-jeff-geerling-he-deserves-a-mention)
 
 1. [Preperation Tasks](#preperation-tasks)
+    - [Who](#who)
+    - [What](#what)
+    - [When](#when)
+    - [How](#how)
+    - [Why](#why)
+
 1. [Day 1](#day-1)
 1. [Week 1](#week-1)
 1. [Month 1 to 3](#month-1-to-3)
@@ -90,7 +96,7 @@ Examples:
 - All Webservers within a specific VPC
 - Windows Servers in AWS EU-West region
 
-# How
+## How
 The only step left is to make a decision on the deployment. Do you need to a [highly available Ansible Tower deployment](https://medium.com/@florianmoss/highly-available-ansible-tower-deployment-on-aws-d95a0c42b1ef) or is a [basic deployment](https://medium.com/@florianmoss/installing-ansible-tower-on-rhel8-using-aws-ec2-c7ee2acad655?sk=b8a7e3d523f7ba3ff48699b344b7ecb1) sufficient? You can find all the [deployment options listed in the docs](https://docs.ansible.com/ansible-tower/latest/html/quickinstall/prepare.html).
 
 I would recommend to start with a basic one machine deployment for smaller teams that manage up to 100 nodes. As long as you have 8-16GB RAM available and 100 GB of storage, you will be fine. If you will have >10 users and a couple of hundred nodes to manage - a [clustered approach](https://docs.ansible.com/ansible-tower/latest/html/administration/clustering.html#ag-clustering) will be the right decision. The steps for this are explained [here](https://medium.com/@florianmoss/highly-available-ansible-tower-deployment-on-aws-d95a0c42b1ef).
