@@ -106,10 +106,25 @@ It is really important to remind yourself why you did all of this. Your main goa
 
 
 # Day 1
-bla 
+Today is the big day, go ahead and deploy your Ansible Tower instance/-s. Implement your authentication model and setup RBAC as you have planned. Then go ahead an setup your inventory.
+
+## Inventories
+You can start with a [static inventory](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html) if there are <100 hosts and there is little volatility for your hosts and hostnames. On the other hand, a [dyanamic inventory](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html#inventory-plugins) will allow for greater flexibility and allow you to scale out. 
+
+## Credentials
+Set your [credentials](https://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html) for private SCM repositories and your hosts. I recommend deploying public keys on the target hosts and storing the private key as a credential. Never use passwords if avoidable.
+
+## Playbook SCM
+For the first 3 months a single repository that contains all playbooks is sufficient, for most users. If you have different teams that manage vastly different environments, find a model that works for you. You could create one repository that manages all Linux machines, one that manages all networking equipment, one for Windows hosts, etc. 
+
+## Projects
+Set up a [project](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html) within Tower for each of those repositories. Make sure that the right users and teams have access to those projects.
+
+## Deliverable
+You should now have a running Ansible Tower deployment, access to 1 or more repositories to manage your playbooks, as well as access to your target hosts either via static inventories or dynamic inventories. 
 
 # Week 1
-bla
+b
 
 # Month 1 to 3
 bla
