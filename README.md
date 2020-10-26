@@ -3,7 +3,7 @@ This repository is a collection of thoughts 💡 intended to help customers with
 
 ## Table of Content
 
-- [Introduction & Prerequisite](#introduction--prerequisite)
+- [Introduction & Prerequisite Learning](#introduction--prerequisite)
     - [Official Red Hat Workshop (recommended)](#option-1-recommended-official-red-hat-workshops)
     - [Online Resources, example: Udemy](#option-2-online-resources-example-udemy)
     - [Self Learning (Docs)](#option-3-self-learning-docs)
@@ -215,13 +215,19 @@ You have identified some basic tasks that you would like to automate. Start with
 <hr>
 
 ## Ansible Lint and Styleguide
-Now that you're starting to write real playbooks, it is important to get things right. For that reason, I would recommend using the [Ansible Linter](https://ansible-lint.readthedocs.io/en/latest/).  The [following style guide](https://github.com/whitecloud/ansible-styleguide) is outdated, but could work as a baseline for you company. Just trust me on this one. Without a style guide, things will get out of hand and things get unmaintainable over time. I've learned that lesson the hard way myself.
+Now that you're starting to write real playbooks, it is important to get things right  🙏. For that reason, I would recommend using the [Ansible Linter](https://ansible-lint.readthedocs.io/en/latest/).  The [following style guide](https://github.com/whitecloud/ansible-styleguide) is outdated, but could work as a baseline for you company. Just trust me on this one. Without a style guide, things will get out of hand and things get unmaintainable over time. I've learned that lesson the hard way myself  😓.
+
+<hr>
 
 ## NodeJS App Deployment
-This playbook deploys a NodeJS application with forever. It uses a single variable that is specified at the beginning of the playbook.
+This [playbook deploys a NodeJS application](https://github.com/florianmoss/ansible-successful-onboarding/tree/master/week1/nodeJS) with forever. It uses a single variable that is specified at the beginning of the playbook.
+
+<hr>
 
 ## Register Hosts with Red Hat Insights
-This playbook demonstrates how Collections can be configured and used withn Ansible Tower.
+This [playbook](https://github.com/florianmoss/ansible-successful-onboarding/tree/master/week1/tower-insights-template) demonstrates how Collections can be configured and used within Ansible Tower.
+
+<hr>
 
 ## VMware Guide
 The integration bewteen Ansible is VMware is quite extensive. The official Ansible documentation contains an [entire section around Ansible for VMware](https://docs.ansible.com/ansible/latest/scenario_guides/guide_vmware.html). 
@@ -261,6 +267,7 @@ Pick a simple use case and make it work. For example, look at the [vmware_guest 
   delegate_to: localhost
   register: deploy_vm
 ```
+<hr>
 
 ## AWS Guide
 Ansible has an extensive integration with with AWS. You can find a [quick start guide here](https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html). Deploying an EC2 instance is as simple as:
@@ -286,16 +293,24 @@ Ansible has an extensive integration with with AWS. You can find a [quick start 
 ```
 AWS offers hundreds of products. Pick something that is relevant to you, such as backing up a database, deploying a new user to an EC2 instance or a developer self-service for development and testing purposes.
 
+<hr>
+
 ## Deliverable 2
 At this stage you should have a few playbooks that help you with the automation of basic tasks. It is important that you take some time now to rewview how the first week went. Were there any roadblocks? Is everyone confident when it comes to the basics: Can you write playbooks, use roles, use collections, apply variables when needed, etc.
 
-Some advice from experience: Don't pull the *Java programmer* behavior and try to modularize all of your playbooks in the beginning. Make sure that they do what you want them to do. You will be able to review them at a later stage. In the first week it's much more important to actually get started and deliver playbooks that help you automating stuff.
+Some advice from experience: Don't pull the *Java programmer* behavior and try to modularize all of your playbooks in the beginning. **Make sure that they do what you want them to do. You will be able to review them at a later stage.** In the first week it's much more important to actually get started and deliver playbooks that help you automate stuff.
+
+<hr>
 
 # Month 1 to 3
 This is arguably the most exciting stage as your are now an advanced Ansible Automation team and you can really start pushing the boundries. 
 
+<hr>
+
 ## Non-production Tower cluster
 Look at your current usage and evaluate the need for a non-production Tower cluster. This is often used in larger enterprises but it could also make sense for an SME depending on the usage and criticallity of hosts that are managed.
+
+<hr>
 
 ## Integration with Ticketing/Self-Service Portal
 [ServiceNow offers great integration](https://github.com/ServiceNowITOM/servicenow-ansible) with Ansible. There is a [fantastic blog post](https://www.ansible.com/blog/ansible-servicenow-howto-part-3-making-outbound-restful-api-calls-to-ansible-tower) that helps you with a step-by-step guide setting all of this up.
@@ -304,14 +319,24 @@ You could also write a simple web-app that trigger makes use of the Tower API, t
 
 There are no limits really. Again, start small and roll with it.
 
+<hr>
+
 ## Roles, Collections and Automation Hub
 You should be able to use and apply [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) and [collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html). Now is also a good time to look into rewriting some of the more complex playbooks and refactor them as roles or even collections. 
 
 Make sure that you understand the [Ansible Automation Hub](https://cloud.redhat.com/ansible/automation-hub) and all of its benefits, such as *Automation Analytics* or the *private Automation Hub*.
 
+<hr>
 
 ## Deliverable 3
-At the end of this 3 month period all of your initial set tasks should be completed. You should have some roles written and modularized some of the more complex playbooks. Meet with the core Ansible team and review your experiences and decide on a strategy for the following 9 months. Are there any issues? Do you need more resources? What went well, what didn't go well? Who is using Ansible, is there a need to include other teams? 
+At the end of this 3 month period all of your initial set tasks should be completed ✅. You should have some roles written and modularized some of the more complex playbooks. Meet with the core Ansible team and review your experiences and decide on a strategy for the following 9 months. 
+
+* Are there any issues❓ 
+* Do you need more resources❓
+* What went well, what didn't go well❓ 
+* Who is using Ansible, is there a need to include other teams❓
+
+<hr>
 
 # Year 1
 This is simple: Keep reviewing what you are doing and identify milestones. Set specific targets. Don't fall into the trap of sating 'yeah we will automate stuff'. What are you going to automate and why? Be as specific as possible.
@@ -320,13 +345,20 @@ Now is also a good time to think about on-boarding for new Ansible users in your
 
 How do you share playbooks between multiple teams? Are playbooks properly documented? Are there obsolete playbooks? 
 
+<hr>
+
 ## Red Hat Health Check
 Get in touch with your account team as early as possible to discuss your experiences from the past few months and look at your renewal. Do you need more nodes to manage? Would you like to engage the Red Hat Services team to improve your workflow? 
+
+<hr>
 
 # Appendix
 This is meant to be a collection of interesting documents and blogs that might be helpful.
 
 ## Ansible Automation for SysAdmins - A quickstart guide to Ansible
-[Document Link](https://github.com/florianmoss/ansible-successful-onboarding/tree/master/appendix)
+[Document Link](https://github.com/florianmoss/ansible-successful-onboarding/blob/master/appendix/ansible_automation_for_sysadmins_v2.pdf)
 
-##
+## Company Success Stories and Exammples for Automation
+[Document Link](https://github.com/florianmoss/ansible-successful-onboarding/blob/master/appendix/The_automated_enterprise-_Unify_people_and_processes-1.pdf)
+
+
