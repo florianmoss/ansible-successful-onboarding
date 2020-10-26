@@ -20,6 +20,10 @@ This repository is a collection of thoughts intended to help customers with a su
     - [Projects](#projects)
     - [Deliverable 1](#deliverable-1)
 - [Week 1](#week-1)
+    - []()
+    - []()
+    - []()
+    - []()
 - [Month 1 to 3](#month-1-to-3)
 - [Year 1](#year-1)
 - [Appendix](#appendix)
@@ -132,14 +136,108 @@ You will likey have some basic tasks identified that you would like to automate.
 ## NodeJS App Deployment
 This playbook deploys a NodeJS application with forever. It uses a single variable that is specified at the beginning of the playbook.
 
+## Register Hosts with Red Hat Insights
+This playbook demonstrates how Collections can be configured and used withn Ansible Tower.
+
 ## VMware Guide
 The integration bewteen Ansible is VMware is quite extensive. The official Ansible documentation contains an [entire section around Ansible for VMware](https://docs.ansible.com/ansible/latest/scenario_guides/guide_vmware.html). 
 You can also get the [collection source code](https://github.com/ansible-collections/vmware.vmware_rest) directly.
+
+Pick a simple use case and make it work. For example, look at the [vmware_guest module](https://docs.ansible.com/ansible/latest/collections/community/vmware/vmware_guest_module.html) and use it to create a virtual machine on an ESXi host:
+
+```yaml
+- name: Create a virtual machine on given ESXi hostname
+  community.vmware.vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: no
+    folder: /DC1/vm/
+    name: test_vm_0001
+    state: poweredon
+    guest_id: centos64Guest
+    # This is hostname of particular ESXi server on which user wants VM to be deployed
+    esxi_hostname: "{{ esxi_hostname }}"
+    disk:
+    - size_gb: 10
+      type: thin
+      datastore: datastore1
+    hardware:
+      memory_mb: 512
+      num_cpus: 4
+      scsi: paravirtual
+    networks:
+    - name: VM Network
+      mac: aa:bb:dd:aa:00:14
+      ip: 10.10.10.100
+      netmask: 255.255.255.0
+      device_type: vmxnet3
+    wait_for_ip_address: yes
+    wait_for_ip_address_timeout: 600
+  delegate_to: localhost
+  register: deploy_vm
+```
+
+## AWS Guide
+Ansible has an extensive integration with with AWS. You can find a [quick start guide here](https://docs.ansible.com/ansible/latest/scenario_guides/guide_aws.html). Deploying an EC2 instance is as simple as:
+```yaml
+- hosts: localhost
+  gather_facts: False
+
+  tasks:
+
+    - name: Provision a set of instances
+      ec2:
+         key_name: my_key
+         group: test
+         instance_type: t2.micro
+         image: "{{ ami_id }}"
+         wait: true
+         exact_count: 5
+         count_tag:
+            Name: Demo
+         instance_tags:
+            Name: Demo
+      register: ec2
+```
+AWS offers hundreds of products. Pick something that is relevant to you, such as backing up a database, deploying a new user to an EC2 instance or a developer self-service for development and testing purposes.
+
+## Deliverable 2
+At this stage you should have a few playbooks that help you with the automation of basic tasks. It is important that you take some time now to rewview how the first week went. Were there any roadblocks? Is everyone confident when it comes to the basics: Can you write playbooks, use roles, use collections, apply variables when needed, etc.
+
+Some advice from experience: Don't pull the *Java programmer* behavior and try to modularize all of your playbooks in the beginning. Make sure that they do what you want them to do. You will be able to review them at a later stage. In the first week it's much more important to actually get started and deliver playbooks that help you automating stuff.
+
 # Month 1 to 3
-bla
+This is arguably the most exciting stage as your are now an advanced Ansible Automation team and you can really start pushing the boundries. 
+
+## Non-production Tower cluster
+Look at your current usage and evaluate the need for a non-production Tower cluster. This is often used in larger enterprises but it could also make sense for an SME depending on the usage and criticallity of hosts that are managed.
+
+## Integration with Ticketing/Self-Service Portal
+[ServiceNow offers great integration](https://github.com/ServiceNowITOM/servicenow-ansible) with Ansible. There is a [fantastic blog post](https://www.ansible.com/blog/ansible-servicenow-howto-part-3-making-outbound-restful-api-calls-to-ansible-tower) that helps you with a step-by-step guide setting all of this up.
+
+You could also write a simple web-app that trigger makes use of the Tower API, this is especially useful if HR is looking to automate the on-boarding process for a new employee. 
+
+There are no limits really. Again, start small and roll with it.
+
+## Roles, Collections and Automation Hub
+You should be able to use and apply [roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html) and [collections](https://docs.ansible.com/ansible/latest/user_guide/collections_using.html). Now is also a good time to look into rewriting some of the more complex playbooks and refactor them as roles or even collections. 
+
+Make sure that you understand the [Ansible Automation Hub](https://cloud.redhat.com/ansible/automation-hub) and all of its benefits, such as *Automation Analytics* or the *private Automation Hub*.
+
+
+## Deliverable 3
+At the end of this 3 month period all of your initial set tasks should be completed. You should have some roles written and modularized some of the more complex playbooks. Meet with the core Ansible team and review your experiences and decide on a strategy for the following 9 months. Are there any issues? Do you need more resources? What went well, what didn't go well? Who is using Ansible, is there a need to include other teams? 
 
 # Year 1
-bla
+This is simple: Keep reviewing what you are doing and identify milestones. Set specific targets. Don't fall into the trap of sating 'yeah we will automate stuff'. What are you going to automate and why? Be as specific as possible.
+
+Now is also a good time to think about on-boarding for new Ansible users in your company. Come up with a learning and on-boarding process for core users and identify a documentation and maintenance strategy. 
+
+How do you share playbooks between multiple teams? Are playbooks properly documented? Are there obsolete playbooks? 
+
+## Red Hat Health Check
+Get in touch with your account team as early as possible to discuss your experiences from the past few months and look at your renewal. Do you need more nodes to manage? Would you like to engage the Red Hat Services team to improve your workflow? 
 
 # Appendix
-bla
+b
