@@ -1,5 +1,5 @@
 # Ansible Automation: Successful Onboarding 🎓  👍
-This repository is a collection of thoughts 💡 intended to help customers with a successful Ansible Automation adoption. ❗️ This repository is by no means a substitution for enterprises that are in need of a full blown consulting/services need❗️. The focus is on SMEs that are looking for guidance to accelerate their Ansible Automation journey 🏎.
+This repository is a collection of thoughts 💡 intended to help customers with a successful Ansible Automation adoption. ❗️ This repository is by no means a substitution for enterprises that are in need of a full blown consulting/services need. The focus is on SMEs that are looking for guidance to accelerate their Ansible Automation journey 🏎 .
 
 ## Table of Content
 
@@ -15,12 +15,14 @@ This repository is a collection of thoughts 💡 intended to help customers with
     - [How](#how)
     - [Why](#why)
 - [Day 1](#day-1)
+    - [Authentication Methods](#authentication-methods)
     - [Inventories](#inventories)
     - [Credentials](#credentials)
     - [Source Control](#playbook-scm)
     - [Projects](#projects)
     - [Deliverable 1](#deliverable-1)
 - [Week 1](#week-1)
+    - [Ansible Lint and Styleguide](#ansible-lint-and-styleguide)
     - [NodeJS App Deployment](#nodejs-app-deployment)
     - [Register Hosts with Red Hat Insights](#register-hosts-with-red-hat-insights)
     - [VMware Guide](#vmware-guide)
@@ -164,12 +166,24 @@ I would recommend to start with a basic one machine deployment for smaller teams
 <hr>
 
 # Day 1
-Today is the big day 🥳, go ahead and deploy your Ansible Tower instance/-s. Implement your authentication model and setup RBAC as you have planned. Then go ahead an setup your inventory, credentials and projects.
+Today is the big day 🥳, go ahead and deploy your Ansible Tower instance/-s. Implement your authentication model and setup RBAC as you have planned. Then go ahead an setup your inventory, credentials and projects. It is essential to get these Day 1 tasks right, as it will be determine how successful the first 2 weeks will be. If you spent time on the preperation tasks and came up with a strategy, then there is no reason why you should encounter any roadblocks today.
 
+Don't forget to personalize Ansible Tower with a custom logo and login message
+
+<hr>
+
+## Authentication Methods
+You will have identified how you want to manage Ansible Tower users. The following options are available to you:
+1. [Username and Password Login](https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html)
+1. [Token Based Authentication: OAuth2](https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html)
+1. [Social Authentication: GitHub & Google](https://docs.ansible.com/ansible-tower/latest/html/administration/social_auth.html)
+1. [Enterprise Authentication: AD, LDAP, RADIUS, SAML](https://docs.ansible.com/ansible-tower/latest/html/administration/ent_auth.html)
 <hr>
 
 ## Inventories
 You can start with a [static inventory](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html) if there are <100 hosts and there is little volatility for your hosts and hostnames. On the other hand, a [dyanamic inventory](https://docs.ansible.com/ansible-tower/latest/html/userguide/inventories.html#inventory-plugins) will allow for greater flexibility and allow you to scale out. 
+
+It's not difficult to switch from static to dynamic inventories later on. Don't worry if you struggle with [custom inventory scripts](https://docs.ansible.com/ansible-tower/latest/html/administration/custom_inventory_script.html), just make sure you have the hosts setup that you identified for your initial tasks. That's the minimum goal.
 
 <hr>
 
@@ -189,14 +203,19 @@ Set up a [project](https://docs.ansible.com/ansible-tower/latest/html/userguide/
 <hr>
 
 ## Deliverable 1
-You should now have a running Ansible Tower deployment, access to 1 or more repositories to manage your playbooks, as well as access to your target hosts either via static inventories or dynamic inventories. 
+You should now have a running Ansible Tower deployment with access to 1 or more repositories to manage your playbooks, as well as access to your target hosts either via static inventories or dynamic inventories through the credentials that you have set up.
+
+You are now ready to do actual work!
 
 <hr>
 
 # Week 1
-You will likey have some basic tasks identified that you would like to automate. To accelerate your execution, this section contains some sample playbooks. You can find the playbooks in the Week1 folder.
+You have identified some basic tasks that you would like to automate. Start with those tasks. To accelerate your execution, this section contains some sample playbooks. You can find the playbooks in the Week1 folder.
 
 <hr>
+
+## Ansible Lint and Styleguide
+Now that you're starting to write real playbooks, it is important to get things right. For that reason, I would recommend using the [Ansible Linter](https://ansible-lint.readthedocs.io/en/latest/).  The [following style guide](https://github.com/whitecloud/ansible-styleguide) is outdated, but could work as a baseline for you company. Just trust me on this one. Without a style guide, things will get out of hand and things get unmaintainable over time. I've learned that lesson the hard way myself.
 
 ## NodeJS App Deployment
 This playbook deploys a NodeJS application with forever. It uses a single variable that is specified at the beginning of the playbook.
