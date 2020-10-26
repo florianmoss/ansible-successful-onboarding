@@ -36,8 +36,8 @@ This repository is a collection of thoughts 💡 intended to help customers with
 - [Year 1](#year-1)
     - [Red Hat Health Check](#red-hat-health-check)
 - [Appendix](#appendix)
-    - []()
-    - []()
+    - [Ansible Automation for SysAdmins - A quickstart guide to Ansible](#ansible-automation-for-sysadmins---a-quickstart-guide-to-ansible)
+    - [Company Success Stories and Exammples for Automation](#company-success-stories-and-exammples-for-automation)
     - []()
     - []()
     - []()
@@ -347,6 +347,21 @@ How do you share playbooks between multiple teams? Are playbooks properly docume
 
 <hr>
 
+## Quo vadis?
+Ansible excels as an automation tool because it plays so well with other tools such as Terraform and ServiceNow. My recommendation would be to explore the integration with those tools to achieve an **Everything as Code** state. 
+
+A great example is Terraform + Ansible. Terraform really exceps at being an Infrastructure as Code tool. Especially for complex environments. Ansible on the other hand is fantastic at configuring these environments. Why not combine both?
+
+**Some examples:**
+
+
+*The Right Way to DevOps with Terraform and Ansible*
+[![The Right Way to DevOps with Terraform and Ansible](https://img.youtube.com/vi/AsPIKWF1y_M/0.jpg)](https://www.youtube.com/watch?v=AsPIKWF1y_M)
+
+*Ansible and HashiCorp: Better Together*
+[![Ansible and HashiCorp: Better Together](https://img.youtube.com/vi/-gKTeT3BgHE/0.jpg)](https://www.youtube.com/watch?v=-gKTeT3BgHE)
+
+
 ## Red Hat Health Check
 Get in touch with your account team as early as possible to discuss your experiences from the past few months and look at your renewal. Do you need more nodes to manage? Would you like to engage the Red Hat Services team to improve your workflow? 
 
@@ -361,4 +376,20 @@ This is meant to be a collection of interesting documents and blogs that might b
 ## Company Success Stories and Exammples for Automation
 [Document Link](https://github.com/florianmoss/ansible-successful-onboarding/blob/master/appendix/The_automated_enterprise-_Unify_people_and_processes-1.pdf)
 
+## Sample AWS Playbooks
+[GitHub Repository: Pat Harrison (Domain SA Red Hat)](https://github.com/pharriso/ansible-aws)
 
+## Collection of Blog Posts
+[Pat Harrison - Cloud Automation Blog](https://cloudautomation.pharriso.co.uk/)
+
+## Sample VMvare Playbooks
+[GitHub Repository: Pat Harrison (Domain SA Red Hat)](https://github.com/pharriso/ansible-vmware)
+
+## Getting Started with Windows Automation
+[Geekflare Blog Post](https://geekflare.com/ansible-playbook-windows-example/)
+
+## Learning Ansibl with CentOS7
+[Blog Post by Bradley Simonin](https://medium.com/@brad.simonin/learning-ansible-with-centos-7-linux-12461043fd02)
+
+## Terraform and Ansible Example
+[Blog Post: Writing Ansible Playbooks for New Terraform Servers](https://victorops.com/blog/writing-ansible-playbooks-for-new-terraform-servers)
