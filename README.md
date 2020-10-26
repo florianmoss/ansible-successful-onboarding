@@ -358,11 +358,13 @@ A great example is Terraform + Ansible. Terraform really exceps at being an Infr
 
 
 *The Right Way to DevOps with Terraform and Ansible*
+
 [![The Right Way to DevOps with Terraform and Ansible](https://img.youtube.com/vi/AsPIKWF1y_M/0.jpg)](https://www.youtube.com/watch?v=AsPIKWF1y_M)
 
 <hr>
 
 *Ansible and HashiCorp: Better Together*
+
 [![Ansible and HashiCorp: Better Together](https://img.youtube.com/vi/-gKTeT3BgHE/0.jpg)](https://www.youtube.com/watch?v=-gKTeT3BgHE)
 
 <hr>
