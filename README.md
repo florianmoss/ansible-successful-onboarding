@@ -34,15 +34,17 @@ This repository is a collection of thoughts 💡 intended to help customers with
     - [Roles, Collections and Automation Hub](#roles-collections-and-automation-hub)
     - [Deliverable 3](#deliverable-3)
 - [Year 1](#year-1)
+    - [Quo vadis?](#quo-vadis)
     - [Red Hat Health Check](#red-hat-health-check)
 - [Appendix](#appendix)
     - [Ansible Automation for SysAdmins - A quickstart guide to Ansible](#ansible-automation-for-sysadmins---a-quickstart-guide-to-ansible)
     - [Company Success Stories and Exammples for Automation](#company-success-stories-and-exammples-for-automation)
-    - []()
-    - []()
-    - []()
-    - []()
-    - []()
+    - [Sample AWS Playbooks](#sample-aws-playbooks)
+    - [Collection of Blog Posts](#collection-of-blog-posts)
+    - [Sample VMvare Playbooks](#sample-vmvare-playbooks)
+    - [Getting Started with Windows Automation](#getting-started-with-windows-automation)
+    - [Learning Ansible with CentOS7](#learning-ansible-with-centos7)
+    - [Terraform and Ansible Example](#terraform-and-ansible-example)
 
 # Introduction & Prerequisite 
 I think that the most important thing for a successful automation journey is the planning phase. A well planned automation 🧑‍🔬 journey will actually allow you to save time while a badly planned automation journey will likely simply introduce another tool that will eat away precious time in an already busy day 🙅‍♀️ . This repository is really meant to help you with the planning and execution of a successful automation journey.
@@ -358,9 +360,12 @@ A great example is Terraform + Ansible. Terraform really exceps at being an Infr
 *The Right Way to DevOps with Terraform and Ansible*
 [![The Right Way to DevOps with Terraform and Ansible](https://img.youtube.com/vi/AsPIKWF1y_M/0.jpg)](https://www.youtube.com/watch?v=AsPIKWF1y_M)
 
+<hr>
+
 *Ansible and HashiCorp: Better Together*
 [![Ansible and HashiCorp: Better Together](https://img.youtube.com/vi/-gKTeT3BgHE/0.jpg)](https://www.youtube.com/watch?v=-gKTeT3BgHE)
 
+<hr>
 
 ## Red Hat Health Check
 Get in touch with your account team as early as possible to discuss your experiences from the past few months and look at your renewal. Do you need more nodes to manage? Would you like to engage the Red Hat Services team to improve your workflow? 
@@ -388,7 +393,7 @@ This is meant to be a collection of interesting documents and blogs that might b
 ## Getting Started with Windows Automation
 [Geekflare Blog Post](https://geekflare.com/ansible-playbook-windows-example/)
 
-## Learning Ansibl with CentOS7
+## Learning Ansible with CentOS7
 [Blog Post by Bradley Simonin](https://medium.com/@brad.simonin/learning-ansible-with-centos-7-linux-12461043fd02)
 
 ## Terraform and Ansible Example
