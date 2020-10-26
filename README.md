@@ -170,12 +170,12 @@ I would recommend starting with a basic one machine deployment for smaller teams
 # Day 1
 Today is the big day 🥳, go ahead and deploy your Ansible Tower instance/-s. Implement your authentication model and setup RBAC as you have planned. Then go ahead and set up your inventory, credentials, and projects. It is essential to get these Day 1 tasks right, as it will determine how successful the first 2 weeks will be. If you spent time on the preparation tasks and came up with a strategy, then there is no reason why you should encounter any roadblocks today.
 
-Don't forget to personalize Ansible Tower with a custom logo and login message
+❗️ Don't forget to [personalize Ansible Tower with a custom logo and login message](https://docs.ansible.com/ansible-tower/latest/html/administration/custom_rebranding.html). 
 
 <hr>
 
 ## Authentication Methods
-You will have identified how you want to manage Ansible Tower users. The following options are available to you:
+You will have identified how you want to manage Ansible Tower users. The following options are available to you - simply follow the instructions based on your preference:
 1. [Username and Password Login](https://docs.ansible.com/ansible-tower/latest/html/userguide/users.html)
 1. [Token Based Authentication: OAuth2](https://docs.ansible.com/ansible-tower/latest/html/administration/oauth2_token_auth.html)
 1. [Social Authentication: GitHub & Google](https://docs.ansible.com/ansible-tower/latest/html/administration/social_auth.html)
