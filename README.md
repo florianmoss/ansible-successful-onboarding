@@ -4,10 +4,11 @@ This repository is a collection of thoughts 💡 intended to help customers with
 ## Table of Content
 
 - [Introduction & Prerequisite Learning](#introduction--prerequisite)
-    - [Official Red Hat Workshop (recommended)](#option-1-recommended-official-red-hat-workshops)
-    - [Online Resources, example: Udemy](#option-2-online-resources-example-udemy)
-    - [Self Learning (Docs)](#option-3-self-learning-docs)
-    - [Jeff Geerling (creator & contributor)](#option-4-jeff-geerling-he-deserves-a-mention)
+    - [Official Red Hat Workshop (recommended)](#option-1-official-red-hat-workshops-recommended)
+    - [Ansible Certifications from Red Hat (recommended)](#option-2-certifications-red-hat-recommended)
+    - [Online Resources, example: Udemy](#option-3-online-resources-example-udemy)
+    - [Self Learning (Docs)](#option-4-self-learning-docs)
+    - [Jeff Geerling (creator & contributor)](#option-5-jeff-geerling-he-deserves-a-mention)
 - [Preparation Tasks](#preparation-tasks)
     - [Who](#who)
     - [What](#what)
@@ -37,6 +38,7 @@ This repository is a collection of thoughts 💡 intended to help customers with
     - [Quo Vadis?](#quo-vadis)
     - [Red Hat Health Check](#red-hat-health-check)
 - [Appendix](#appendix)
+    - [Official Red Hat Ansible Blog](#official-red-hat-ansible-blog)
     - [Ansible Automation for SysAdmins - A quickstart guide to Ansible](#ansible-automation-for-sysadmins---a-quickstart-guide-to-ansible)
     - [Company Success Stories and Exammples for Automation](#company-success-stories-and-exammples-for-automation)
     - [Sample AWS Playbooks](#sample-aws-playbooks)
@@ -63,21 +65,34 @@ A variety of teams within Red Hat offer [monthly Ansible workshops](https://gith
 - **Ansible Security Automation** focused on automation of security tools like Check Point Firewall, IBM QRadar, and the IDS Snort
 - **Ansible Windows Automation Workshop** focused on automation of Microsoft Windows
 
-To avail of this option, get in touch with your local account team.
+To avail of this option, get in touch with your local account team. Keep in mind that this is good enough as a basic starting point, for a full certifaction, look at the next option.
 
 <hr>
 
-## Option 2: Online resources, example Udemy
+## Option 2: Certifications Red Hat (recommended)
+If you want the [best training on the market](https://www.ansible.com/products/training-certification) than there is no better option than this. Red Hat offers 7 different learning paths that will ensure that you are set up for success.
+- [Microsoft Windows Automation with Red Hat Ansible](https://www.redhat.com/en/services/training/do417-microsoft-windows-automation-red-hat-ansible)
+- [Advanced Automation: Ansible Best Practices](https://www.redhat.com/en/services/training/do447-advanced-automation-ansible-best-practices)
+- [Red Hat System Administration III: Linux Automation with Ansible](https://www.redhat.com/en/services/training/rh294-red-hat-system-administration-iii-linux-automation)
+- [Red Hat Certified Engineer (RHCE) exam for Red Hat Enterprise Linux 8](https://www.redhat.com/en/services/training/ex294-red-hat-certified-engineer-rhce-exam-red-hat-enterprise-linux-8)
+- [Ansible Essentials: Simplicity in Automation Technical Overview](https://www.redhat.com/en/services/training/do007-ansible-essentials-simplicity-automation-technical-overview)
+- [Ansible for Network Automation](https://www.redhat.com/en/services/training/do457-ansible-network-automation)
+- [The Red Hat Certified Specialist in Advanced Automation](https://www.redhat.com/en/services/training/ex447-red-hat-certified-specialist-advanced-automation-ansible-best-practices-exam)
+
+Each learning path is designed with a goal in mind. The optional certification that you can get at the end of each course carries real value as Red Hat certifications are one of the hardest to get in the IT industry. 
+<hr>
+
+## Option 3: Online resources, example Udemy
 There are dozens of online resources available nowadays. If you prefer to learn at your own pace and you know that this way of learning works well for you - go ahead! I have used Udemy before and can recommend the following course: [Ansible for the Absolute Beginner - Hands-On - DevOps](https://www.udemy.com/course/learn-ansible/) as well as the advanced course [Ansible Advanced - Hands-On DevOps](https://www.udemy.com/course/learn-ansible-advanced/). I have no affiliation with Udemy or the creator.
 
 <hr>
 
-## Option 3: Self learning (Docs)
+## Option 4: Self learning (Docs)
 If you have experience with other automation tools such as Chef or Puppet and you like to just do your own thing, [skip to the docs and just get your hands dirty](https://docs.ansible.com/ansible/latest/user_guide/intro_getting_started.html). There is no reason why you wouldn't be able to do this, Ansible is straight forward in its application and requires a very minimal setup. The only problem here is that this option generally skips Ansible Tower.
 
 <hr>
 
-## Option 4: Jeff Geerling (he deserves a mention)
+## Option 5: Jeff Geerling (he deserves a mention)
 Jeff Geerling runs a [great blog and published dozens of videos on Ansible](https://www.jeffgeerling.com/blog/2020/ansible-101-jeff-geerling-youtube-streaming-series). He also published a book called [Ansible for DevOps](https://www.jeffgeerling.com/project/ansible-devops) that has sold >20.000 copies as of 2019. Jeff is a very vocal contributor to the Ansible Open Source project. I can recommend his content as his blogs helped me a lot when starting out.
 
 <hr>
@@ -111,7 +126,7 @@ Again, there is no need yet to apply these. But you should identify a strategy.
 
 
 ## What
-Decide what you want to achieve. Identify the tasks that you want to automate. This could be onboarding for new users, deploying VMs, configuring cloud VPCs, or maintaining networking equipment. **You should identify 10-20 small tasks for the first few weeks that you want to automate** - ❗️ important: Keep it realistic and don't overcomplicate things. Don't come up with something like *I want to automate our on-prem infrastructure*.
+Decide what you want to achieve. You can find inspiration [here](https://www.ansible.com/use-cases) and [here](https://www.ansible.com/integrations). Identify the tasks that you want to automate. This could be onboarding for new users, deploying VMs, configuring cloud VPCs, or maintaining networking equipment. **You should identify 10-20 small tasks for the first few weeks that you want to automate** - ❗️ important: Keep it realistic and don't overcomplicate things. Don't come up with something like *I want to automate our on-prem infrastructure*.
 
 👌 Think especially of tasks that are time-consuming and error-prone.
 
@@ -302,10 +317,21 @@ At this stage, you should have a few playbooks that help you with the automation
 
 Some advice from experience: Don't pull the *Java programmer* behavior and try to modularize all of your playbooks in the beginning. **Make sure that they do what you want them to do. You will be able to review them at a later stage.** In the first week it's much more important to get started and deliver playbooks that help you automate stuff.
 
+It is very important that you have clearly identified what you want to do for the following 12 weeks.
+
 <hr>
 
 # Month 1 to 3
-This is arguably the most exciting stage as you are now an advanced Ansible Automation team and you can start pushing the boundaries. 
+This is arguably the most exciting stage as you are now an advanced Ansible Automation team and you can start pushing the boundaries. Make sure that you truly understand the core concepts and more advanced one such as:
+- [Conditionals](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
+- [Privilege Escalation](https://docs.ansible.com/ansible/latest/user_guide/become.html)
+- [Playbook Troubleshooting](https://docs.ansible.com/ansible/latest/user_guide/playbooks_startnstep.html)
+- [Templating (Jinja2)](https://docs.ansible.com/ansible/latest/user_guide/playbooks_templating.html)
+- [Error Handling](https://docs.ansible.com/ansible/latest/user_guide/playbooks_error_handling.html)
+
+There are of course a lot more things that you can learn. But don't worry, you will pick them up over time. It is much more important to identify tasks that you want to automate and deliver them.
+
+If you need more inspiration on what to automate, have a look [here](https://www.ansible.com/use-cases) or [here](https://www.ansible.com/integrations).
 
 <hr>
 
@@ -376,6 +402,9 @@ Get in touch with your account team as early as possible to discuss your experie
 
 # Appendix
 This is meant to be a collection of interesting documents and blogs that might be helpful.
+
+## Official Red Hat Ansible Blog
+[Link to Website](https://www.ansible.com/blog)
 
 ## Ansible Automation for SysAdmins - A quickstart guide to Ansible
 [Document Link](https://github.com/florianmoss/ansible-successful-onboarding/blob/master/appendix/ansible_automation_for_sysadmins_v2.pdf)
