@@ -1,5 +1,13 @@
 # Ansible Automation: Successful Onboarding 🎓  👍
-This repository is a collection of thoughts 💡 intended to help customers with a successful Ansible Automation adoption. ❗️ This repository is by no means a substitution for enterprises that require a full-blown consulting/services need. The focus is on SMEs that are looking for guidance to accelerate their Ansible Automation journey 🏎 .
+This repository is a collection of thoughts 💡 intended to help customers with a successful Ansible Automation Platform adoption. ❗️ This repository is by no means a substitution for enterprises that require a full-blown consulting/services need. The focus is on SMEs that are looking for guidance to accelerate their Ansible Automation Platform journey 🏎 .
+
+Maybe you noticed already that I didn't just say *Ansible adoption*. Let me quickly explain why that is: Ansible itself is just a tool, a tool is very limited and can never evolve into a wider strategy. Just as much as a hammer alone doesn't build a house. What you need is a toolkit - or what we call it: A platform. That is the big difference between using Ansible to automate some tasks and having a professional Automation strategy for your business.
+
+An Automation strategy involved 5 phases in my opinion, as seen below. 
+
+![Automation Strategy](images/strategy.png)
+
+This document will help you to conquer Level 1-3 as they are the easiest to achieve and are achievable by any business in a relatively short period. 
 
 ## Table of Content
 
@@ -35,7 +43,8 @@ This repository is a collection of thoughts 💡 intended to help customers with
     - [Roles, Collections and Automation Hub](#roles-collections-and-automation-hub)
     - [Deliverable after 3 Months](#deliverable-3)
 - [Year 1](#year-1)
-    - [Quo Vadis?](#quo-vadis)
+    - [Quo Vadis? (Where to?)](#quo-vadis)
+    - [Automation Services Catalog](#automation-services-catalog)
     - [Red Hat Health Check](#red-hat-health-check)
 - [Appendix](#appendix)
     - [Official Red Hat Ansible Blog](#official-red-hat-ansible-blog)
@@ -65,12 +74,12 @@ A variety of teams within Red Hat offer [monthly Ansible workshops](https://gith
 - **Ansible Security Automation** focused on automation of security tools like Check Point Firewall, IBM QRadar, and the IDS Snort
 - **Ansible Windows Automation Workshop** focused on automation of Microsoft Windows
 
-To avail of this option, get in touch with your local account team. Keep in mind that this is good enough as a basic starting point, for a full certifaction, look at the next option.
+To avail of this option, get in touch with your local account team. Keep in mind that this is good enough as a basic starting point, for full certification, look at the next option.
 
 <hr>
 
 ## Option 2: Certifications Red Hat (recommended)
-If you want the [best training on the market](https://www.ansible.com/products/training-certification) than there is no better option than this. Red Hat offers 7 different learning paths that will ensure that you are set up for success.
+If you want the [best training on the market](https://www.ansible.com/products/training-certification) then there is no better option than this. Red Hat offers 7 different learning paths that will ensure that you are set up for success.
 - [Microsoft Windows Automation with Red Hat Ansible](https://www.redhat.com/en/services/training/do417-microsoft-windows-automation-red-hat-ansible)
 - [Advanced Automation: Ansible Best Practices](https://www.redhat.com/en/services/training/do447-advanced-automation-ansible-best-practices)
 - [Red Hat System Administration III: Linux Automation with Ansible](https://www.redhat.com/en/services/training/rh294-red-hat-system-administration-iii-linux-automation)
@@ -93,7 +102,7 @@ If you have experience with other automation tools such as Chef or Puppet and yo
 <hr>
 
 ## Option 5: Jeff Geerling (he deserves a mention)
-Jeff Geerling runs a [great blog and published dozens of videos on Ansible](https://www.jeffgeerling.com/blog/2020/ansible-101-jeff-geerling-youtube-streaming-series). He also published a book called [Ansible for DevOps](https://www.jeffgeerling.com/project/ansible-devops) that has sold >20.000 copies as of 2019. Jeff is a very vocal contributor to the Ansible Open Source project. I can recommend his content as his blogs helped me a lot when starting out.
+Jeff Geerling runs a [great blog and published dozens of videos on Ansible](https://www.jeffgeerling.com/blog/2020/ansible-101-jeff-geerling-youtube-streaming-series). He also published a book called [Ansible for DevOps](https://www.jeffgeerling.com/project/ansible-devops) that has sold >20.000 copies as of 2019. Jeff is a very vocal contributor to the Ansible Open Source project. I can recommend his content as his blogs helped me a lot when starting.
 
 <hr>
 
@@ -317,12 +326,12 @@ At this stage, you should have a few playbooks that help you with the automation
 
 Some advice from experience: Don't pull the *Java programmer* behavior and try to modularize all of your playbooks in the beginning. **Make sure that they do what you want them to do. You will be able to review them at a later stage.** In the first week it's much more important to get started and deliver playbooks that help you automate stuff.
 
-It is very important that you have clearly identified what you want to do for the following 12 weeks.
+You must identify what you want to do for the following 12 weeks.
 
 <hr>
 
 # Month 1 to 3
-This is arguably the most exciting stage as you are now an advanced Ansible Automation team and you can start pushing the boundaries. Make sure that you truly understand the core concepts and more advanced one such as:
+This is arguably the most exciting stage as you are now an advanced Ansible Automation team and you can start pushing the boundaries. Make sure that you truly understand the core concepts and more advanced ones such as:
 - [Conditionals](https://docs.ansible.com/ansible/latest/user_guide/playbooks_conditionals.html)
 - [Privilege Escalation](https://docs.ansible.com/ansible/latest/user_guide/become.html)
 - [Playbook Troubleshooting](https://docs.ansible.com/ansible/latest/user_guide/playbooks_startnstep.html)
@@ -394,6 +403,42 @@ A great example is Terraform + Ansible. Terraform excels at being an Infrastruct
 [![Ansible and HashiCorp: Better Together](https://img.youtube.com/vi/-gKTeT3BgHE/0.jpg)](https://www.youtube.com/watch?v=-gKTeT3BgHE)
 
 <hr>
+
+## Automation Services Catalog
+
+The [Automation Services Catalog](https://www.ansible.com/products/automation-services-catalog) is probably my favorite feature added in 2020 to the Ansible Automation platform. It is basically a mini ServiceNow system for your playbooks.
+
+Imagine the following: The Dev team wants to get a VM with specific specifications. All they need to do is fill out a form and send it off. A manager can then review and approve the request and off you go - the job will run and send out a notification to the dev team with the machine credentials. 
+
+There is much more in it of course, but that's the just of it. 
+
+<hr>
+
+## Level Up: Standards and Governance
+
+You have mastered Level 3 on the initial graphic. But how do you reach Level 4 or even 5? 
+
+Standards and Governance are hugely important as they will make your life significantly easier over time. Most of these items are common sense and should already be practiced - but it is important to review them item by item and have a reality check with your teams. The more you scale up your automation strategy, the more important structure becomes.
+
+- Repository structure, code standards, documentation, and reuse mechanisms (collections/roles/Automation Hub).
+- Standardized testing and CI approaches for new playbooks.
+- Identify and utilize sources of truth - or start building them.
+- Automate content release process, deployments, and lifecycle.
+- Operationalize your automation, considering access control, scale, and auditing/visibility.
+
+<hr>
+
+## Level Up: Organizationally
+
+This is the final boss and the hardest beast to tackle - the larger your organization, the worse this one becomes. Organizational change. Such an over-used term, I know. But it is true: If you want to have an **Organization-Wide Automation Strategy**, you need to bring the whole organization on board with you.
+
+So how exactly can you increase adoption across silos?
+
+- Socialize and enforce the standards and governance mentioned earlier.
+- Charter and empower an Automation team with vision across the organization. 
+- Establish **your** Automation platform and simplify onboarding.
+- Expand Ansible integrations in support of end-to-end automation.
+- Identify and track metrics and KPIs within Automation Hub. Focus on outcomes.
 
 ## Red Hat Health Check
 Get in touch with your account team as early as possible to discuss your experiences from the past few months and look at your renewal. Do you need more nodes to manage? Would you like to engage the Red Hat Services team to improve your workflow? 
