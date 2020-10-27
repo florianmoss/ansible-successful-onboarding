@@ -45,6 +45,8 @@ This document will help you to conquer Level 1-3 as they are the easiest to achi
 - [Year 1](#year-1)
     - [Quo Vadis? (Where to?)](#quo-vadis)
     - [Automation Services Catalog](#automation-services-catalog)
+    - [Level Up: Standards and Governance](#level-up-standards-and-governance)
+    - [Level Up: Organizationally](#level-up-organizationally)
     - [Red Hat Health Check](#red-hat-health-check)
 - [Appendix](#appendix)
     - [Official Red Hat Ansible Blog](#official-red-hat-ansible-blog)
