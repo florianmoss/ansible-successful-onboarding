@@ -1,7 +1,7 @@
 # Ansible Automation: Successful Onboarding 🎓  👍
 This repository is a collection of thoughts 💡 intended to help customers with a successful Ansible Automation Platform adoption. ❗️ This repository is by no means a substitution for enterprises that require a full-blown consulting/services need. The focus is on SMEs that are looking for guidance to accelerate their Ansible Automation Platform journey 🏎 .
 
-Maybe you noticed already that I didn't just say *Ansible adoption*. Let me quickly explain why that is: Ansible itself is just a tool, a tool is very limited and can never evolve into a wider strategy. Just as much as a hammer alone doesn't build a house. What you need is a toolkit - or what we call it: A platform. That is the big difference between using Ansible to automate some tasks and having a professional Automation strategy for your business.
+Maybe you noticed already that I didn't just say *Ansible adoption*. I said: **Ansible Automation Platform**. Let me quickly explain why that is: Ansible itself is a tool, and a tool is limited by its function. A hammer alone doesn't build a house. What you need is a collection of tools: a toolkit - or what we call it: A platform. That is the big difference between using Ansible to automate some tasks and using Ansible Automation Platform to implement an automation strategy for your business.
 
 An Automation journey involves 5 phases in my opinion, as seen below. The fact that you are here means that your are at least **Aware** that there is a need for a strategy. 
 
