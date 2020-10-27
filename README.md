@@ -3,11 +3,11 @@ This repository is a collection of thoughts 💡 intended to help customers with
 
 Maybe you noticed already that I didn't just say *Ansible adoption*. Let me quickly explain why that is: Ansible itself is just a tool, a tool is very limited and can never evolve into a wider strategy. Just as much as a hammer alone doesn't build a house. What you need is a toolkit - or what we call it: A platform. That is the big difference between using Ansible to automate some tasks and having a professional Automation strategy for your business.
 
-An Automation strategy involves 5 phases in my opinion, as seen below. 
+An Automation journey involves 5 phases in my opinion, as seen below. The fact that you are here means that your are at least **Aware** that there is a need for a strategy. 
 
 ![Automation Strategy](images/strategy.png)
 
-This document will help you to conquer Level 1-3 as they are the easiest to achieve and are achievable by any business in a relatively short period. 
+This document will help you to conquer Level 1-3 as they are the easiest to achieve and are achievable by any business in a relatively short period. The [Year 1 section](#year-1) will also include some tips on how to achieve Level 4 and 5.
 
 ## Table of Content
 
